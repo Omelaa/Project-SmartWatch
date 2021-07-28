@@ -1,0 +1,60 @@
+body {
+  font-size: 16px;
+  line-height: 1.8;
+  color: $gray;
+  @include roboto(400);
+  background-color: #ffffff;
+
+  @include r (990) {
+    &.lock {
+      overflow: hidden;
+    }
+  }
+}
+
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &__sm{
+    max-width: 1500px;
+  }
+}
+
+.button {
+  padding: 15px 60px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+}
+
+.title {
+  color: $cello;
+  @include roboto(500);
+  font-size: 48px;
+  position: relative;
+  text-align: center;
+
+  span {
+    color: $accent;
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}

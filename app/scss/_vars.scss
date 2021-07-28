@@ -1,0 +1,44 @@
+$cello: #334e68;
+$gray: #627d98;
+$accent: #2186eb;
+$video-color: #7cc4fa;
+
+
+@mixin r($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+
+@mixin roboto($weight){
+  font-family: 'Roboto',
+  sans-serif;
+  font-weight: $weight;
+}
+
+@mixin text-clamp($lines: 2, $line-height: false) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+
+  @if $line-height {
+    max-height: $line-height * $lines * 1px;
+  }
+}
+
+@mixin checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
+
+@function max ($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min ($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
