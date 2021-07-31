@@ -18,7 +18,7 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 
-  &__sm{
+  &__sm {
     max-width: 1500px;
   }
 }
@@ -27,6 +27,17 @@ body {
   padding: 15px 60px;
   border: 2px solid #ffffff;
   border-radius: 50px;
+  @include roboto(700);
+  transition: 0.7s all;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $accent;
+    border-color: $accent;
+    background-color: inherit;
+    opacity: 1;
+  }
 }
 
 .title {

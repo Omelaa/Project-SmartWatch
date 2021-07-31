@@ -21,6 +21,7 @@ $(function(){
       centerPadding: '0px',
       slidesToShow: 5,
       arrow: false,
+      focusOnSelect: true,
   });
 });
 
@@ -30,10 +31,30 @@ $('.questions__subtitle').click(function () {
   if ($('.questions__item').hasClass('one')) {
       $('.questions__subtitle').not($(this)).removeClass('active');
       $('.questions__text').not($(this).next()).slideUp(300);
-    
   }
   $(this).toggleClass('active').next().slideToggle(300);
-  
-})
-  
+});
+
+
+
+
+$('.contact__sort').styler();
+
+
+
+$('.jq-selectbox__select').click(function () {
+    $(this).toggleClass('active');
+  }
+);
+
+//  $(document).ready(function() {
+//   $('.slick-dots button').removeClass('.slick-dots button').toggleClass('active');
+//  }
+// );
+
+$('.jq-selectbox__select').click(function () {
+    $(this).toggleClass('active');
+  }
+);
+
 });
