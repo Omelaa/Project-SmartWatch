@@ -29,6 +29,8 @@ body {
   border-radius: 50px;
   @include roboto(700);
   transition: 0.7s all;
+  @include text-clamp(1);
+  max-width: 200px;
 
   &:hover,
   &:active,
@@ -45,7 +47,11 @@ body {
   @include roboto(500);
   font-size: 48px;
   position: relative;
+  margin: 0 auto;
   text-align: center;
+  @include text-clamp(2);
+  max-width: 600px;
+  width: 100%;
 
   span {
     color: $accent;
