@@ -28,10 +28,11 @@ $(function(){
 		$('body,html').animate({scrollTop: top}, 1000);
 	});
 
+
   $('.people-slider__items').slick({
     dots: false,
     infinite: true,
-    // fade: true,
+    fade: true,
     arrows: true,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -61,13 +62,12 @@ $(function(){
       breakpoint: 414,
       settings: {
         slidesToShow: 1,
-      }
-    },
-  {
-  }]
+       }
+     },
+   {
+   }]
   });
 });
-
 
 
 $('.questions__subtitle').click(function () {
@@ -79,27 +79,13 @@ $('.questions__subtitle').click(function () {
 });
 
 
-
-
 $('.contact__sort').styler();
-
 
 
 $('.jq-selectbox__select').click(function () {
     $(this).toggleClass('active');
   }
 );
-
-$('.slick-next').on('click',function () {
-    $('.slick-next').removeClass('.slick-next--active');
-    $(this).addClass('.slick-next--active');
-  }
-);
-
-//  $(document).ready(function() {
-//   $('.slick-dots button').removeClass('.slick-dots button').toggleClass('active');
-//  }
-// );
 
 
 function ibg(){

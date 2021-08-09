@@ -1,0 +1,290 @@
+.contact {
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 85px;
+    @include text-clamp(2);
+
+    @include r (768) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+
+    @include r (768) {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    transition: 0.5s opacity;
+
+    &::after {
+      content: "";
+      background-image: url(../images/content/icons/paper-plane.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      left: 30px;
+      top: 15px;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  &__address {
+    padding: 10px 25px 10px 65px;
+    display: block;
+    margin-right: 25px;
+
+    @include r (768) {
+      margin: 0 0 25px 0;
+    }
+  }
+
+  &__address,
+  .jq-selectbox__select {
+    border: 2px solid $accent;
+    background-color: #fff;
+    position: relative;
+    border-radius: 28px;
+
+    &::placeholder {
+      color: $accent;
+      @include roboto(700);
+    }
+  }
+
+  &__button {
+    position: static;
+    padding: 12px 60px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 0.7;
+
+      @include r (414) {
+        color: $accent;
+        border-color: $accent;
+      }
+    }
+  }
+
+  &__sort {
+    margin-right: 25px;
+
+    @include r (768) {
+      margin: 0 0 25px 0;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+
+    @include r (768) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    @include roboto(700);
+    color: $accent;
+    transition: 0.5s opacity;
+    position: relative;
+    margin-bottom: 50px;
+    max-width: 200px;
+
+    &::after {
+      content: "";
+      background-image: url(../images/content/icons/compass.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 25px;
+      height: 25px;
+    }
+
+    &--mail {
+      &::after {
+        background-image: url(../images/content/icons/at.svg);
+        top: 5px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &--phone {
+      &::after {
+        background-image: url(../images/content/icons/telephone.svg);
+      }
+    }
+
+    &--compass {
+      &::after {
+        background-image: url(../images/content/icons/compass.svg);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 75px;
+
+      @include r(768) {
+        margin-right: 0;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    @include r(768) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__map {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 125px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s opacity;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @include r(768) {
+      padding: 25px 0;
+    }
+  }
+
+  &__img {
+    transition: 0.5s transform;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.jq-selectbox__select {
+  background: inherit;
+  box-shadow: inherit;
+  height: inherit;
+  min-width: 270px;
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 10px 25px 10px 35px;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s opacity;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.7;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    width: 13px;
+    height: 3px;
+    background-color: $accent;
+    position: absolute;
+    top: 24px;
+    right: 0;
+    transition: 0.5s all;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    right: 25px;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    right: 17px;
+  }
+
+  &.active {
+    &::before {
+      transform: rotate(-45deg);
+      right: 19px;
+      width: 18px;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      right: 19px;
+      width: 18px;
+    }
+  }
+}
+
+.jq-selectbox__trigger {
+  border: 0;
+}
+
+.jq-selectbox__select-text {
+  font-size: 16px;
+  color: $accent;
+  @include roboto(700);
+  min-width: 100%;
+}
+
+.jq-selectbox__dropdown {
+  border: 2px solid $accent;
+  border-radius: 25px;
+  min-width: 100%;
+  transition: 0.5s all;
+  background-color: rgba(255, 255, 255, 0.905);
+  color: $accent;
+  cursor: pointer;
+  overflow: hidden;
+
+  li {
+    padding: 0 15px;
+    transition: 0.5s background-color;
+
+    &:last-child {
+      padding-bottom: 15px;
+    }
+
+    &:first-child {
+      padding-top: 15px;
+    }
+
+    &:hover {
+      background-color: $accent;
+      color: #ffffff;
+    }
+  }
+}
