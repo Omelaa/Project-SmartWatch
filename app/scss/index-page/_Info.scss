@@ -58,7 +58,7 @@
     &::before,
     &::after {
       content: "";
-      background-image: url(../images/content/steps/download.png);
+      background-image: url(../images/content/steps/download.webp);
       background-repeat: no-repeat;
       background-size: cover;
       position: absolute;
@@ -70,7 +70,7 @@
     }
 
     &::after {
-      background-image: url(../images/content/steps/1.png);
+      background-image: url(../images/content/steps/1.webp);
       left: 40px;
       top: -105px;
       width: 60px;
@@ -86,7 +86,7 @@
     &--settings {
 
       &::before {
-        background-image: url(../images/content/steps/settings.png);
+        background-image: url(../images/content/steps/settings.webp);
         width: 50px;
         height: 50px;
         left: 0px;
@@ -95,7 +95,7 @@
       }
 
       &::after {
-        background-image: url(../images/content/steps/2.png);
+        background-image: url(../images/content/steps/2.webp);
         left: 25px;
         top: -105px;
         width: 95px;
@@ -106,7 +106,7 @@
     &--diamond {
 
       &::before {
-        background-image: url(../images/content/steps/diamond.png);
+        background-image: url(../images/content/steps/diamond.webp);
         width: 50px;
         height: 45px;
         left: -5px;
@@ -115,7 +115,7 @@
       }
 
       &::after {
-        background-image: url(../images/content/steps/3.png);
+        background-image: url(../images/content/steps/3.webp);
         left: 25px;
         top: -105px;
         width: 95px;
@@ -132,7 +132,7 @@
 
 .works {
   padding: 125px 0 40px 0;
-  background-image: url(../images/content/works/Wave.png);
+  background-image: url(../images/content/works/Wave.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: revert;

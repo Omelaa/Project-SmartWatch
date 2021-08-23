@@ -1,8 +1,8 @@
 .questions {
-  background-image: url(../images/content/questions/Wave.png);
+  background-image: url(../images/content/questions/Wave.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom bottom;
+  background-position: bottom;
   padding-top: 140px;
 
   @include r (414) {
